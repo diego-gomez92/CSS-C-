@@ -1,0 +1,113 @@
+/*
+ * Title: hw1_1.cpp
+ * Description: This program reads two integer numbers from a user and displays the sum, average, and product.   
+ * Author: Diego Gomez
+ * Date: 9/11/2020
+ */
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+  // Initialize variables
+  int num1, num2, sum, avg, product;
+
+  // Get user input
+  cout << "Enter two integers: ";
+  cin >> num1 >> num2;
+  cout << "You entered " << num1 << " and " << num2 << "." << endl;
+
+  // Perform arithmetic 
+  sum = num1 + num2;
+  avg = (num1 + num2) / 2; 
+  product = num1 * num2;
+
+  // Dsiplay arithmetic
+  cout << num1 << " + " << num2 << " = " << sum << endl;
+  cout << "(" << num1 << " + " << num2 << ") / 2 = " << avg << endl;
+  cout << num1 << " * " << num2 << " = " << product << endl;
+
+  // Exit Program 
+  return 0;
+}
+
+
+
+/*
+ * Title: hw1_2.cpp
+ * Description: Suppose a worker who works for a company has received a 7.6% pay increase next year. This program takes the worker’s current annual salary as input, and outputs the amount of salary increase, the new annual salary, and the new monthly salary.
+ * Author: Diego Gomez
+ * Date: 9/11/2020
+ */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  // Initialize variables
+  double current_salary, salary_increase, new_anual_salary, new_monthly_salary;
+
+  // Get user input
+  cout << "Enter your current salary => ";
+  cin >> current_salary;
+
+  // Perform arithmetic 
+  salary_increase = current_salary * .076;  
+  new_anual_salary = current_salary + salary_increase; 
+  new_monthly_salary = (current_salary / 12) + (salary_increase / 12); 
+  // Print out two decimal places 
+  cout.setf(ios::fixed);
+  cout.setf(ios::showpoint);
+  cout.precision(2);
+
+  // Print out new values
+  cout << "Salary increase: $" << salary_increase << endl;
+  cout << "New annual salary: $" << new_anual_salary << endl;
+  cout << "New monthly salary: $" << new_monthly_salary << endl; 
+
+  // Exit Program 
+  return 0;
+}
+
+
+/*
+ * Title: hw1_3.cpp
+ * Description: This program  allows the user to enter a number of cents. Then the program outputs the value in terms of quarters, dimes, nickels, and pennies. The output should look as follows.
+ * Author: Diego Gomez
+ * Date: 9/11/2020
+ */
+
+#include <iostream>
+using namespace std;
+
+
+
+int main() {
+
+  // Initialize variables  
+  int cents, quarters, dimes, nickles, pennies; 
+  
+  // User input for cents 
+  cout << "Enter the number of cents: ";
+  cin >> cents; 
+
+  // Use modulus to perform arithmetic 
+  quarters = cents / 25;
+  cents = cents % 25;
+  dimes = cents / 10;
+  cents = cents % 10;
+  nickles = cents / 5;
+  cents = cents % 5;
+  pennies = cents / 1;
+  
+  // Print out values for coins
+  cout << "Number of quarters : " << quarters << endl;
+  cout << "Number of dimes : " << dimes << endl;
+  cout << "Number of nickels : " << nickles << endl;
+  cout << "Number of pennies : " << pennies << endl;
+
+  return 0;
+}

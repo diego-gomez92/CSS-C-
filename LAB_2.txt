@@ -1,0 +1,106 @@
+/*
+* Title: lab2_1.cpp
+* Description: This program demonstrates the variable declaration and computation of circle area.
+* Author: Diego Gomez
+* Date: 9/12/2020
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  // Declare a variable to store the PI value (= 3.141592).
+  double pi = 3.141592;
+
+  // Declare two variables to store the values of radius and
+  // circle area. 
+  double radius;
+  double area_circle;
+
+  // User input and out
+  cout << "Enter a radius for your circle: ";  
+  cin >> radius;
+
+  // Compute the area of circle.
+  area_circle = pi * radius * radius;
+
+  // Display the result of computation.
+  cout << "The area of a circle with a radius of ";
+  cout << radius << " is " << area_circle << endl;
+
+  // Exit program
+  return 0;
+}
+
+
+/*
+* Title: lab2_2.cpp
+* Description: This program converts a Celsius degree to a corresponding Fahrenheit degree.
+* Author: Diego Gomez
+* Date: 9/12/2020
+*/
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+  // Variables 
+  double Celsius, Fahrenheit;
+ 
+  // Get user input for Celsius
+  cout << "Enter a Celsius degree: ";
+  cin >> Celsius;
+
+  // Apply formula to convert from Celsius to Fahrenheit
+  Fahrenheit = (9.0/5.0) * Celsius + 32.0;
+
+  // Print out conversion output 
+  cout << Celsius << " C --> " << Fahrenheit << " F";
+
+  // End program
+  return 0;
+}
+
+
+/*
+* Title: lab2_3.cpp
+* Description: This program allows the user to enter a number of quarters, dimes, nickels, and dollars. Then the program outputs the monetary value of the coins in cents. 
+* Author: Diego Gomez
+* Date: 9/12/2020
+*/
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+  // Variables 
+  int quarters, dimes, nickels, dollars, monetary_value;
+
+  // User input 
+  cout << "Enter number of quarters: ";
+  cin >> quarters;
+  cout << "Enter number of dimes: ";
+  cin >> dimes;
+  cout << "Enter number of nickels: ";
+  cin >> nickels;
+  cout << "Enter number of dollars: ";
+  cin >> dollars;
+
+  // Convert to cents 
+  quarters *= 25;
+  dimes *= 10;
+  nickels *= 5;
+  dollars *= 100;
+
+  // Add all the cents together 
+  monetary_value = quarters + dimes + nickels + dollars; 
+
+  // Show user the monetary value 
+  cout << "The monetary value is " << monetary_value << " cents.";
+
+  // End program 
+  return 0;
+}
